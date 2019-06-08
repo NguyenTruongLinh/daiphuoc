@@ -56,7 +56,7 @@ jQuery(document).ready(function() {
         margin: 10,
         items: 1,
         nav: true,
-        // autoplay: true,
+        autoplay: true,
         mouseDrag: false,
         touchDrag: false,
     })
