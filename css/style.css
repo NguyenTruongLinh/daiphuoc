@@ -64,7 +64,7 @@ a {
   font-family: 'Tiempos';
   src: url("../fonts/Roboto-Medium.ttf") format("truetype");
   font-weight: 500; }
-img {
+img, embed {
   width: 100%;
   height: 100%; }
 
@@ -126,18 +126,21 @@ header, .sticky {
     position: relative;
     z-index: 3;
     width: 100%; }
+    header .container .menu .logo-mobile, header .container .menu .menu-mb-close, .sticky .container .menu .logo-mobile, .sticky .container .menu .menu-mb-close {
+      display: none; }
     header .container .menu ul, .sticky .container .menu ul {
       list-style: none; }
       header .container .menu ul li.parent, .sticky .container .menu ul li.parent {
         display: inline-block;
         position: relative; }
-        header .container .menu ul li.parent a, .sticky .container .menu ul li.parent a {
+        header .container .menu ul li.parent a, header .container .menu ul li.parent p, .sticky .container .menu ul li.parent a, .sticky .container .menu ul li.parent p {
           color: #fff;
           text-transform: uppercase;
           display: block;
           padding: 5px 10px;
-          font-weight: 500; }
-        header .container .menu ul li.parent a:hover, .sticky .container .menu ul li.parent a:hover {
+          font-weight: 500;
+          cursor: pointer; }
+        header .container .menu ul li.parent a:hover, header .container .menu ul li.parent p:hover, .sticky .container .menu ul li.parent a:hover, .sticky .container .menu ul li.parent p:hover {
           background: #fff;
           color: #000; }
         header .container .menu ul li.parent .menu-parent.active, .sticky .container .menu ul li.parent .menu-parent.active {
@@ -174,14 +177,122 @@ header, .sticky {
             border-bottom: none; }
         header .container .menu ul li.parent ul.child.show, .sticky .container .menu ul li.parent ul.child.show {
           display: block; }
+    header .container .menu-mobile, .sticky .container .menu-mobile {
+      display: none; }
+    header .container .icon-phone-ring, .sticky .container .icon-phone-ring {
+      display: none; }
+  @media (max-width: 1100px) {
+    header .container .icon-phone-ring, .sticky .container .icon-phone-ring {
+      width: 44px;
+      display: block; }
+    header .container .menu-mobile, .sticky .container .menu-mobile {
+      width: 24px;
+      height: 19px;
+      position: absolute;
+      top: 35px;
+      left: 20px;
+      z-index: 99;
+      display: block;
+      cursor: pointer; }
+      header .container .menu-mobile span, .sticky .container .menu-mobile span {
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: #fff; }
+      header .container .menu-mobile span:nth-child(2), .sticky .container .menu-mobile span:nth-child(2) {
+        top: 8px; }
+      header .container .menu-mobile span:last-child, .sticky .container .menu-mobile span:last-child {
+        bottom: 0; }
+    header .container .logo, .sticky .container .logo {
+      margin-left: 50px; }
+    header .container .menu, .sticky .container .menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: -286px;
+      width: 286px;
+      height: 100vh;
+      background-color: inherit;
+      overflow-y: auto;
+      -webkit-transition: left 0.3s ease;
+      transition: left 0.3s ease;
+      z-index: 9999;
+      background: #fff;
+      padding: 10px 20px; }
+      header .container .menu .logo-mobile, .sticky .container .menu .logo-mobile {
+        display: block;
+        width: 60%;
+        margin-bottom: 20px; }
+        header .container .menu .logo-mobile a, .sticky .container .menu .logo-mobile a {
+          display: block; }
+      header .container .menu .menu-mb-close, .sticky .container .menu .menu-mb-close {
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        display: block;
+        font-size: 20px;
+        cursor: pointer; }
+      header .container .menu ul li.parent, .sticky .container .menu ul li.parent {
+        display: block; }
+        header .container .menu ul li.parent a, header .container .menu ul li.parent p, .sticky .container .menu ul li.parent a, .sticky .container .menu ul li.parent p {
+          color: #000;
+          padding: 8px 0;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+                  justify-content: space-between; }
+        header .container .menu ul li.parent .menu-parent.active, .sticky .container .menu ul li.parent .menu-parent.active {
+          background: transparent;
+          color: #1d3e11; }
+        header .container .menu ul li.parent ul.child, .sticky .container .menu ul li.parent ul.child {
+          position: relative;
+          width: 100%;
+          padding: 0 10px 10px; }
+          header .container .menu ul li.parent ul.child li h4, .sticky .container .menu ul li.parent ul.child li h4 {
+            display: none; }
+    header .container .menu.is-active, .sticky .container .menu.is-active {
+      left: 0; }
+    header .container .overlay-mobile, .sticky .container .overlay-mobile {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #000000;
+      opacity: 0.5;
+      cursor: pointer;
+      visibility: hidden;
+      z-index: 900; }
+    header .container .overlay-mobile.active, .sticky .container .overlay-mobile.active {
+      visibility: visible; } }
+  @media (max-width: 600px) {
+    header .container .icon-phone-ring, .sticky .container .icon-phone-ring {
+      width: 30px; }
+    header .container .logo, .sticky .container .logo {
+      width: 170px;
+      margin-left: 40px; }
+    header .container .menu-mobile, .sticky .container .menu-mobile {
+      top: 25px;
+      width: 20px;
+      height: 15px; }
+      header .container .menu-mobile span:nth-child(2), .sticky .container .menu-mobile span:nth-child(2) {
+        top: 6px; } }
 
 .sticky {
   position: fixed;
   display: none;
   background: url("../images/bg-header.png") no-repeat;
   z-index: 9999;
-  -webkit-transition: all 2s;
-  transition: all 2s;
+  -webkit-transition: bottom 10s ease;
+  transition: bottom 10s ease;
   -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 12px rgba(0, 0, 0, 0.1); }
   .sticky .img-inside-sticky {
@@ -193,6 +304,8 @@ header, .sticky {
     z-index: 1; }
   .sticky .container .menu ul li a {
     color: #000 !important; }
+  .sticky .container .menu-mobile span {
+    background: #000; }
 
 .sticky.stick {
   display: block; }
@@ -279,6 +392,10 @@ header, .sticky {
 .view-more:hover {
   background-color: #c11722; }
 
+@media (max-width: 600px) {
+  .view-more {
+    width: 100%;
+    text-align: center; } }
 /*************
 * Scroll Top Button
 *************/
@@ -339,24 +456,7 @@ footer {
         line-height: 26px; }
       footer ul li.parent p.intro {
         margin-top: 10px; }
-    footer ul li.parent:first-child {
-      width: 33.33%; }
-    footer ul li.parent:nth-child(2) {
-      width: 37%; }
-      footer ul li.parent:nth-child(2) .col-left, footer ul li.parent:nth-child(2) .col-right {
-        width: calc(50% - 10px);
-        margin-right: 20px;
-        margin-left: 20px; }
-      footer ul li.parent:nth-child(2) li.child {
-        margin-top: 10px; }
-        footer ul li.parent:nth-child(2) li.child a {
-          color: #fff; }
-    footer ul li.parent:last-child {
-      margin-right: 0;
-      width: 25%; }
-      footer ul li.parent:last-child iframe {
-        margin-top: 20px; }
-      footer ul li.parent:last-child a {
+      footer ul li.parent .social a {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -373,14 +473,95 @@ footer {
         border-radius: 2px;
         margin-right: 10px;
         font-size: 18px; }
-      footer ul li.parent:last-child a:hover {
+      footer ul li.parent .social a:hover {
         background: #c11722;
         color: #fff; }
+    footer ul li.parent:first-child {
+      width: 33.33%; }
+      footer ul li.parent:first-child .social, footer ul li.parent:first-child .mobile {
+        display: none; }
+    footer ul li.parent:nth-child(2) {
+      width: 37%; }
+      footer ul li.parent:nth-child(2) .col-left, footer ul li.parent:nth-child(2) .col-right {
+        width: calc(50% - 10px);
+        margin-right: 20px;
+        margin-left: 20px; }
+        footer ul li.parent:nth-child(2) .col-left i, footer ul li.parent:nth-child(2) .col-right i {
+          display: none; }
+      footer ul li.parent:nth-child(2) li.child {
+        margin-top: 10px; }
+        footer ul li.parent:nth-child(2) li.child a {
+          color: #fff; }
+    footer ul li.parent:last-child {
+      margin-right: 0;
+      width: 25%; }
+      footer ul li.parent:last-child iframe {
+        margin-top: 20px; }
   footer .copyright {
     color: #fff;
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.3); }
     footer .copyright a {
       color: #fff; }
+  @media (max-width: 768px) {
+    footer ul li.parent:first-child {
+      float: unset;
+      width: 100%;
+      margin-bottom: 20px; }
+    footer ul li.parent:not(:first-child) {
+      width: calc(50% - 10px); }
+      footer ul li.parent:not(:first-child) .col-left, footer ul li.parent:not(:first-child) .col-right {
+        margin-left: 0; }
+    footer .copyright {
+      text-align: center; } }
+  @media (max-width: 600px) {
+    footer ul li.parent:first-child {
+      text-align: center; }
+      footer ul li.parent:first-child h3, footer ul li.parent:first-child .intro {
+        display: none; }
+      footer ul li.parent:first-child .mobile {
+        display: block; }
+        footer ul li.parent:first-child .mobile a.logo {
+          display: block;
+          width: 200px;
+          margin: 0 auto; }
+      footer ul li.parent:first-child .social {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        margin-top: 20px; }
+    footer ul li.parent:nth-child(2) {
+      width: 100%; }
+      footer ul li.parent:nth-child(2) .row {
+        display: block; }
+        footer ul li.parent:nth-child(2) .row .col-left, footer ul li.parent:nth-child(2) .row .col-right {
+          width: 100%; }
+          footer ul li.parent:nth-child(2) .row .col-left .border-bottom, footer ul li.parent:nth-child(2) .row .col-right .border-bottom {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            cursor: pointer; }
+          footer ul li.parent:nth-child(2) .row .col-left i, footer ul li.parent:nth-child(2) .row .col-right i {
+            display: block; }
+          footer ul li.parent:nth-child(2) .row .col-left .border-bottom:before, footer ul li.parent:nth-child(2) .row .col-right .border-bottom:before {
+            width: 100%;
+            height: 1px; }
+          footer ul li.parent:nth-child(2) .row .col-left ul, footer ul li.parent:nth-child(2) .row .col-right ul {
+            display: none; }
+          footer ul li.parent:nth-child(2) .row .col-left ul.active, footer ul li.parent:nth-child(2) .row .col-right ul.active {
+            display: block; }
+        footer ul li.parent:nth-child(2) .row .col-left {
+          margin-bottom: 15px; }
+    footer ul li.parent:last-child {
+      display: none; } }
 
 /*# sourceMappingURL=style.css.map */

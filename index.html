@@ -16,18 +16,31 @@
         <div class="row">
             <div class="container">
                 <div class="row justify-space-between align-item-center pd-tb-10">
+                    <div class="menu-mobile">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <div class="logo">
                         <a href="index.html">
                             <img src="images/logo.png" alt="DaiPhuoc">
                         </a>
                     </div>
                     <div class="menu">
+                        <div class="logo-mobile">
+                            <a href="index.html">
+                                <img src="images/sticky-logo-header.png" alt="DaiPhuoc">
+                            </a>
+                        </div>
+                        <a class="menu-mb-close">
+                            <i class="fal fa-times"></i>
+                        </a>
                         <ul>
                             <li class="parent">
-                                <a href="#">Giới thiệu <i class="fal fa-angle-down"></i></a>
+                                <a href="#" >Giới thiệu <i class="fal fa-angle-down"></i></a>
                             </li>
                             <li class="parent">
-                                <a class="menu-parent" id="menu-duan" href="#">Dự án <i class="fal fa-angle-down"></i></a>
+                                <p class="menu-parent" id="menu-duan">Dự án <i class="fal fa-angle-down"></i></p>
                                 <ul class="child">
                                     <li>
                                         <h4>DỰ ÁN ĐANG PHÁT TRIỂN</h4>
@@ -62,10 +75,16 @@
                                 <a href="#">Tuyển dụng <i class="fal fa-angle-down"></i></a>
                             </li>
                             <li class="parent">
-                                <a href="#">Liên hệ</i></a>
+                                <a href="#">Liên hệ</a>
                             </li>
                         </ul>
                     </div>
+                    <div class="icon-phone-ring">
+                        <a href="#">
+                            <img src="images/phone-ring.png" alt="DaiPhuoc">
+                        </a>
+                    </div>
+                    <div class="overlay-mobile"></div>
                 </div>
             </div>
         </div>
@@ -76,18 +95,51 @@
         <div class="row">
             <div class="container">
                 <div class="row justify-space-between align-item-center pd-tb-10">
+                    <div class="menu-mobile">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     <div class="logo">
                         <a href="index.html">
                             <img src="images/sticky-logo-header.png" alt="DaiPhuoc">
                         </a>
                     </div>
                     <div class="menu">
+                        <div class="logo-mobile">
+                            <a href="index.html">
+                                <img src="images/sticky-logo-header.png" alt="DaiPhuoc">
+                            </a>
+                        </div>
+                        <a class="menu-mb-close">
+                            <i class="fal fa-times"></i>
+                        </a>
                         <ul>
                             <li class="parent">
                                 <a href="#">Giới thiệu <i class="fal fa-angle-down"></i></a>
                             </li>
                             <li class="parent">
-                                <a href="#">Dự án <i class="fal fa-angle-down"></i></a>
+                                <a class="menu-parent" id="menu-duan">Dự án <i class="fal fa-angle-down"></i></a>
+                                <ul class="child">
+                                    <li>
+                                        <h4>DỰ ÁN ĐANG PHÁT TRIỂN</h4>
+                                    </li>
+                                    <li>
+                                        <a href="#">Dự án Sân Golf Hồ Tràm</a>
+                                    </li>
+                                    <li>
+                                        <a>Dự án Opal</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Dự án Sân Golf Hồ Tràm</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Dự án Opal</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Dự án Sân Golf Hồ Tràm</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li class="parent">
                                 <a href="#">Đối tác <i class="fal fa-angle-down"></i></a>
@@ -102,11 +154,15 @@
                                 <a href="#">Tuyển dụng <i class="fal fa-angle-down"></i></a>
                             </li>
                             <li class="parent">
-                                <a href="#">Liên hệ</i></a>
+                                <a href="#">Liên hệ</a>
                             </li>
                         </ul>
                     </div>
+                    <a href="#" class="icon-phone-ring">
+                        <img src="images/icon-call.png" alt="DaiPhuoc">
+                    </a>
                 </div>
+                <!-- <div class="overlay-mobile"></div> -->
             </div>
         </div>
     </div>
@@ -420,12 +476,25 @@
                     <h3 class="border-bottom">ĐỊA ỐC ĐẠI PHƯỚC</h3>
                     <p class="intro">Uy tín, chất lượng và hiệu quả. Đại Phước sẽ là nơi khách hàng trao gửi niềm tin trọn vẹn, người lao động cống hiến hết mình và cộng đồng được hưởng nhiều lợi ích.</p>
 
+                    <div class="mobile">
+                        <a class="logo" href="#">
+                            <img src="images/logo-footer.png" alt="DaiPhuoc">
+                        </a>
+                        <p class="address">191 Trần Não, P. Bình An, Quận 2, Tp. Hồ Chí Minh</p>
+                    </div>
+                    <div class="social row">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+
                 </li>
                 <li class="parent">
                     <div class="row">
                         <div class="col-left">
-                            <h3 class="border-bottom">CÔNG TY</h3>
-                            <ul>
+                            <h3 id="link-cty" class="border-bottom">CÔNG TY <i class="fal fa-angle-down"></i></h3>
+                            <ul id="mn-cty">
                                 <li class="child"><a href="#">Về Đại Phước</a></li>
                                 <li class="child"><a href="#">Tầm nhìn - xứ mệnh</a></li>
                                 <li class="child"><a href="#">Đối tác</a></li>
@@ -436,8 +505,8 @@
                             </ul>
                         </div>
                         <div class="col-right">
-                            <h3 class="border-bottom">THÔNG TIN</h3>
-                            <ul>
+                            <h3 id="link-info" class="border-bottom">THÔNG TIN <i class="fal fa-angle-down"></i></h3>
+                            <ul id="mn-info">
                                 <li class="child"><a href="#">Pháp lý</a></li>
                                 <li class="child"><a href="#">Bảo mật thông tin</a></li>
                                 <li class="child"><a href="#">Quảng cáo</a></li>
