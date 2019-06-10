@@ -40,7 +40,7 @@ jQuery(document).ready(function() {
         loop: true,
         items: 1,
         nav: true,
-        // autoplay: true,
+        autoplay: true,
         mouseDrag: false,
         touchDrag: false,
         autoplayHoverPause: true,
